@@ -1,6 +1,6 @@
 # TodoList_API
-[Guide]: (https://learn.microsoft.com/en-us/aspnet/core/tutorials/first-web-api?view=aspnetcore-8.0&tabs=visual-studio)  
-  
+[Guide](https://learn.microsoft.com/en-us/aspnet/core/tutorials/first-web-api?view=aspnetcore-8.0&tabs=visual-studio)  
+## Assignment
 Building a .NET Core Web API for the Todo List
 
 Your task is to build a RESTful API using .NET Core that will serve as
