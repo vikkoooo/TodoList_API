@@ -10,9 +10,10 @@ namespace TodoList_API
 			var builder = WebApplication.CreateBuilder(args);
 
 			// Add services to the container.
+			builder.Services.AddDbContext<TodoContext>(options => // Adds the database context to the DI container.
+			options.UseSqlServer(builder.Configuration.GetConnectionString("TodoContext") ?? throw new InvalidOperationException("Connection string 'TodoContext' not found.")));
 			builder.Services.AddControllers();
-			builder.Services.AddDbContext<TodoContext>(opt => // Adds the database context to the DI container.
-			opt.UseInMemoryDatabase("TodoList")); // Specifies that the database context will use an in-memory database.
+
 
 			var app = builder.Build();
 
