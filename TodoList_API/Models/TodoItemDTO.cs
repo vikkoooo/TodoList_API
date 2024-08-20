@@ -1,9 +1,15 @@
-﻿namespace TodoList_API.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace TodoList_API.Models
 {
 	public class TodoItemDTO
 	{
-		public long Id { get; set; }
-		public string? Name { get; set; }
-		public bool IsComplete { get; set; }
+		public int Id { get; set; }
+		[Required]
+		public string Title { get; set; }
+		public bool IsCompleted { get; set; }
+		public DateTime Timestamp { get; set; }
+		[Required]
+		public string Author { get; set; }
 	}
 }
